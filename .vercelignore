@@ -1,0 +1,9 @@
+# Kept in the repo, excluded from the public deployment.
+# The repo is private; the deployed site is not. Nothing here should be
+# reachable at a guessable URL.
+
+docs/
+tools/
+BUILD.md
+README.md
+.gitignore

@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "project": "Hold & Split — BookMyShow group booking",
+    "device": {
+      "width": 393,
+      "height": 852,
+      "name": "iPhone 15 Pro"
+    },
+    "note": "Screens are standalone static HTML, already cross-linked by <a href>. Navigation works inside an iframe with no router. Serve over http:// so the shell can read the active screen."
+  },
+  "tabs": [
+    {
+      "id": "hold",
+      "label": "Hold & Split",
+      "caption": "Rohan — in the app",
+      "entry": "A1b",
+      "screens": [
+        "A1b",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A10b"
+      ]
+    },
+    {
+      "id": "friend",
+      "label": "Friend's payment",
+      "caption": "Arjun — mobile web, no app",
+      "entry": "B1",
+      "screens": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7"
+      ]
+    },
+    {
+      "id": "edge",
+      "label": "Edge cases",
+      "caption": "When it goes wrong",
+      "entry": "C1",
+      "screens": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ]
+    }
+  ],
+  "screens": {
+    "A1b": {
+      "title": "Seat map · high demand",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A1b.html"
+    },
+    "A1": {
+      "title": "Seat map",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A1.html"
+    },
+    "A2": {
+      "title": "Split & hold setup",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A2.html"
+    },
+    "A3": {
+      "title": "Name the seats",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A3.html"
+    },
+    "A4": {
+      "title": "Confirm your hold",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A4.html"
+    },
+    "A5": {
+      "title": "Payment — hold",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A5.html"
+    },
+    "A6": {
+      "title": "Hold active",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A6.html"
+    },
+    "A7": {
+      "title": "Group status",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A7.html"
+    },
+    "A8": {
+      "title": "Seats secured",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A8.html"
+    },
+    "A9": {
+      "title": "Pay your balance",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A9.html"
+    },
+    "A10": {
+      "title": "Group ticket",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A10.html"
+    },
+    "A10b": {
+      "title": "Ticket · balance due",
+      "tab": "hold",
+      "chrome": "app",
+      "file": "screens/A10b.html"
+    },
+    "B1": {
+      "title": "Join page",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B1.html"
+    },
+    "B2": {
+      "title": "Phone number",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B2.html"
+    },
+    "B3": {
+      "title": "Pay your hold",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B3.html"
+    },
+    "B4": {
+      "title": "Hold paid, waiting",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B4.html"
+    },
+    "B5": {
+      "title": "Secured",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B5.html"
+    },
+    "B6": {
+      "title": "Pay balance",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B6.html"
+    },
+    "B7": {
+      "title": "Friend's ticket",
+      "tab": "friend",
+      "chrome": "mobile-web",
+      "file": "screens/B7.html"
+    },
+    "C1": {
+      "title": "Hold expired",
+      "tab": "edge",
+      "chrome": "app",
+      "file": "screens/C1.html"
+    },
+    "C2": {
+      "title": "Book short · 3 of 4",
+      "tab": "edge",
+      "chrome": "app",
+      "file": "screens/C2.html"
+    },
+    "C3": {
+      "title": "Cover a friend",
+      "tab": "edge",
+      "chrome": "app",
+      "file": "screens/C3.html"
+    },
+    "C4": {
+      "title": "Seat released",
+      "tab": "edge",
+      "chrome": "app",
+      "file": "screens/C4.html"
+    },
+    "C5": {
+      "title": "Payment failed",
+      "tab": "edge",
+      "chrome": "app",
+      "file": "screens/C5.html"
+    }
+  },
+  "hotspots": [
+    {
+      "from": "A1b",
+      "label": "Split &amp; hold",
+      "to": "A2"
+    },
+    {
+      "from": "A1",
+      "label": "Split &amp; hold",
+      "to": "A2"
+    },
+    {
+      "from": "A2",
+      "label": "Go back to the seat map",
+      "to": "A1"
+    },
+    {
+      "from": "A2",
+      "label": "Name the seats",
+      "to": "A3"
+    },
+    {
+      "from": "A2",
+      "label": "Pay ₹80 and hold seats",
+      "to": "A4"
+    },
+    {
+      "from": "A3",
+      "label": "Close and go back without naming the seats",
+      "to": "A2"
+    },
+    {
+      "from": "A3",
+      "label": "Skip",
+      "to": "A2"
+    },
+    {
+      "from": "A3",
+      "label": "Done",
+      "to": "A2"
+    },
+    {
+      "from": "A4",
+      "label": "Go back",
+      "to": "A2"
+    },
+    {
+      "from": "A4",
+      "label": "Continue",
+      "to": "A5"
+    },
+    {
+      "from": "A5",
+      "label": "Go back",
+      "to": "A4"
+    },
+    {
+      "from": "A5",
+      "label": "₹ PhonePe Go to UPI app to complete the payment",
+      "to": "A6"
+    },
+    {
+      "from": "A6",
+      "label": "Close",
+      "to": "A1"
+    },
+    {
+      "from": "A6",
+      "label": "Share on WhatsApp",
+      "to": "B1"
+    },
+    {
+      "from": "A6",
+      "label": "Copy link",
+      "to": "B1"
+    },
+    {
+      "from": "A6",
+      "label": "Share by SMS",
+      "to": "B1"
+    },
+    {
+      "from": "A6",
+      "label": "See who's paid",
+      "to": "A7"
+    },
+    {
+      "from": "A7",
+      "label": "Go back",
+      "to": "A6"
+    },
+    {
+      "from": "A7",
+      "label": "Share link again",
+      "to": "B1"
+    },
+    {
+      "from": "A8",
+      "label": "Close",
+      "to": "A7"
+    },
+    {
+      "from": "A8",
+      "label": "See group",
+      "to": "A7"
+    },
+    {
+      "from": "A8",
+      "label": "Pay ₹216.02 now",
+      "to": "A9"
+    },
+    {
+      "from": "A9",
+      "label": "Go back",
+      "to": "A8"
+    },
+    {
+      "from": "A9",
+      "label": "Pay now",
+      "to": "A5"
+    },
+    {
+      "from": "A10",
+      "label": "Close ticket",
+      "to": "A8"
+    },
+    {
+      "from": "A10",
+      "label": "R A P D 4 of 4 paid",
+      "to": "A7"
+    },
+    {
+      "from": "A10b",
+      "label": "Close ticket",
+      "to": "A8"
+    },
+    {
+      "from": "A10b",
+      "label": "R A P D 2 of 4 paid · ₹216 due from Priya, Dev",
+      "to": "A7"
+    },
+    {
+      "from": "B1",
+      "label": "Arjun Waiting",
+      "to": "B2"
+    },
+    {
+      "from": "B1",
+      "label": "Pay ₹80 to hold my seat",
+      "to": "B2"
+    },
+    {
+      "from": "B2",
+      "label": "Continue",
+      "to": "B3"
+    },
+    {
+      "from": "B3",
+      "label": "Pay ₹80",
+      "to": "B4"
+    },
+    {
+      "from": "B5",
+      "label": "Pay ₹216.02",
+      "to": "B6"
+    },
+    {
+      "from": "B6",
+      "label": "Pay now",
+      "to": "B7"
+    },
+    {
+      "from": "C1",
+      "label": "Close",
+      "to": "A1"
+    },
+    {
+      "from": "C1",
+      "label": "Pick other seats",
+      "to": "A1"
+    },
+    {
+      "from": "C1",
+      "label": "Try again with G5–G8",
+      "to": "A1"
+    },
+    {
+      "from": "C2",
+      "label": "Close this sheet",
+      "to": "A7"
+    },
+    {
+      "from": "C2",
+      "label": "Book for 3",
+      "to": "A8"
+    },
+    {
+      "from": "C3",
+      "label": "Close this sheet",
+      "to": "A7"
+    },
+    {
+      "from": "C5",
+      "label": "Dismiss",
+      "to": "B3"
+    },
+    {
+      "from": "C5",
+      "label": "Try again",
+      "to": "B4"
+    },
+    {
+      "from": "C5",
+      "label": "Use a different method",
+      "to": "B3"
+    }
+  ]
+}
