@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1">
+<title>A1 · Seat map with Split and hold</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;font-family:Roboto,Inter,system-ui,sans-serif}
+a{color:#1A73E8}a:hover{color:#1557B0}
+.seatscroll{scrollbar-width:none}
+.seatscroll::-webkit-scrollbar{display:none}
+button{font-family:inherit}
+</style>
+<style>
+html,body{margin:0;padding:0;width:393px;height:852px;overflow:hidden}
+*{-webkit-tap-highlight-color:transparent}
+a{text-decoration:none}
+</style>
+</head>
+<body data-screen="A1">
+<div style="width: 393px; height: 852px; box-sizing: border-box; background: #FFFFFF; display: flex; flex-direction: column; overflow: hidden; color: #222222">
+
+  <div style="height: 54px; flex: none; display: flex; align-items: center; justify-content: space-between; padding: 0 20px 0 28px; background: #FFFFFF">
+    <span style="font-size: 16px; font-weight: 600; letter-spacing: 0.2px">2:06</span>
+    <span style="display: flex; align-items: center; gap: 6px">
+      <svg width="18" height="12" viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1" fill="#222222"></rect><rect x="5" y="6" width="3" height="6" rx="1" fill="#222222"></rect><rect x="10" y="3" width="3" height="9" rx="1" fill="#222222"></rect><rect x="15" y="0" width="3" height="12" rx="1" fill="#222222"></rect></svg>
+      <span style="font-size: 15px; font-weight: 500">5G</span>
+      <span style="display: flex; align-items: center; gap: 1px">
+        <span style="width: 26px; height: 14px; border-radius: 4px; background: #FFCC00; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #222222">54</span>
+        <span style="width: 2px; height: 5px; border-radius: 0 1px 1px 0; background: #BDBDBD"></span>
+      </span>
+    </span>
+  </div>
+
+  <div style="height: 76px; flex: none; display: flex; align-items: center; background: #FFFFFF; border-bottom: 1px solid #E6E6E6; box-sizing: border-box">
+    <button type="button" aria-label="Go back" style="width: 36px; height: 36px; margin-left: 8px; border: none; background: none; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 4L7 12l8 8" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+    <span style="display: flex; flex-direction: column; gap: 2px; margin-left: 8px">
+      <span style="font-size: 22px; font-weight: 600; line-height: 26px">Ramayana - Hindi</span>
+      <span style="font-size: 14px; color: #666666; line-height: 18px">Silver Screen (AC Dolby 7.1): Bijoynagar</span>
+    </span>
+  </div>
+
+  <div style="height: 136px; flex: none; box-sizing: border-box; background: #EFF2F6; padding: 14px 24px 0 24px">
+    <div style="height: 26px; display: flex; align-items: center; justify-content: space-between">
+      <span style="font-size: 19px; font-weight: 600">Sat, 21 Nov</span>
+      <button type="button" style="border: none; background: none; padding: 0; display: flex; align-items: center; gap: 6px; cursor: pointer">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M11.2 1.8l3 3L5.5 13.5 1.8 14.2l0.7-3.7 8.7-8.7z" stroke="#F84464" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 15px; font-weight: 500; color: #F84464">4 Tickets</span>
+      </button>
+    </div>
+    <div style="margin-top: 14px; display: flex; gap: 16px">
+      
+        <button type="button" aria-pressed="false" style="width: 148px; height: 72px; border-radius: 6px; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #FFFFFF; border: 1.5px solid #1EA362; ">
+          <span style="font-size: 17px; font-weight: 600; color: #222222;">11:00 AM</span>
+          <span style="font-size: 11px; color: #666666;">DOLBY 7.1</span>
+        </button>
+      
+        <button type="button" aria-pressed="true" style="width: 148px; height: 72px; border-radius: 6px; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #1EA362; border: 1.5px solid #1EA362; ">
+          <span style="font-size: 17px; font-weight: 600; color: #FFFFFF;">03:00 PM</span>
+          <span style="font-size: 11px; color: #FFFFFF;">DOLBY 7.1</span>
+        </button>
+      
+    </div>
+  </div>
+
+  <div class="seatscroll" style="flex: 1 1 auto; min-height: 0; overflow-y: auto; background: #FFFFFF; padding: 12px 0 16px 0">
+    
+      <div>
+        
+          <div style="padding: 10px 0 0 40px">
+            <div style="font-size: 17px; color: #222222">₹ 250 Platinum</div>
+            <div style="width: 337px; height: 1px; background: #E6E6E6; margin-top: 8px; margin-bottom: 14px"></div>
+          </div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">A</span>
+          
+            <button type="button" aria-label="Seat A1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat A2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat A3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat A4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat A5, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat A6, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat A7, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat A8, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat A9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat A10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat A11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat A12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat A13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat A14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">B</span>
+          
+            <button type="button" aria-label="Seat B1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat B2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat B3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat B4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat B5, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat B6, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat B7, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat B8, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat B9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat B10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat B11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat B12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat B13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat B14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">C</span>
+          
+            <button type="button" aria-label="Seat C1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat C2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat C3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat C4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat C5, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat C6, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat C7, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat C8, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat C9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat C10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat C11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat C12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat C13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat C14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">D</span>
+          
+            <button type="button" aria-label="Seat D1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat D2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat D3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat D4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat D5, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat D6, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat D7, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat D8, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat D9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat D10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat D11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat D12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat D13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat D14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">E</span>
+          
+            <button type="button" aria-label="Seat E1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat E2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat E3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat E4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat E5, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat E6, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat E7, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat E8, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat E9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat E10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat E11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat E12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat E13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat E14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">F</span>
+          
+            <button type="button" aria-label="Seat F1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat F2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat F3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat F4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat F5, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat F6, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat F7, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat F8, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat F9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat F10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat F11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat F12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat F13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat F14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">G</span>
+          
+            <button type="button" aria-label="Seat G1, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat G2, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat G3, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat G4, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat G5, ₹250" aria-pressed="true" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #1EA362; border: none; color: #FFFFFF; ">5</button>
+          
+            <button type="button" aria-label="Seat G6, ₹250" aria-pressed="true" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #1EA362; border: none; color: #FFFFFF; ">6</button>
+          
+            <button type="button" aria-label="Seat G7, ₹250" aria-pressed="true" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #1EA362; border: none; color: #FFFFFF; ">7</button>
+          
+            <button type="button" aria-label="Seat G8, ₹250" aria-pressed="true" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #1EA362; border: none; color: #FFFFFF; ">8</button>
+          
+            <button type="button" aria-label="Seat G9, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat G10, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat G11, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat G12, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat G13, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat G14, ₹250" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+          <div style="padding: 10px 0 0 40px">
+            <div style="font-size: 17px; color: #222222">₹ 200 Gold</div>
+            <div style="width: 337px; height: 1px; background: #E6E6E6; margin-top: 8px; margin-bottom: 14px"></div>
+          </div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">H</span>
+          
+            <button type="button" aria-label="Seat H1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat H2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat H3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat H4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat H5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat H6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat H7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat H8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat H9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat H10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat H11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat H12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat H13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat H14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">I</span>
+          
+            <button type="button" aria-label="Seat I1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat I2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat I3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat I4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat I5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat I6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat I7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat I8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat I9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat I10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat I11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat I12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat I13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat I14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">J</span>
+          
+            <button type="button" aria-label="Seat J1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat J2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat J3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat J4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat J5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat J6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat J7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat J8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat J9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat J10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat J11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat J12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat J13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat J14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">K</span>
+          
+            <button type="button" aria-label="Seat K1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat K2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat K3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat K4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat K5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat K6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat K7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat K8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat K9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat K10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat K11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat K12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat K13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat K14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">L</span>
+          
+            <button type="button" aria-label="Seat L1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat L2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat L3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat L4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat L5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat L6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat L7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat L8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat L9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat L10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat L11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat L12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat L13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat L14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">M</span>
+          
+            <button type="button" aria-label="Seat M1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat M2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat M3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat M4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat M5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat M6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat M7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat M8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat M9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat M10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat M11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat M12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat M13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat M14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">N</span>
+          
+            <button type="button" aria-label="Seat N1, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat N2, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat N3, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat N4, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat N5, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat N6, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat N7, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat N8, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat N9, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat N10, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat N11, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat N12, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat N13, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat N14, ₹200" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+          <div style="padding: 10px 0 0 40px">
+            <div style="font-size: 17px; color: #222222">₹ 150 Silver</div>
+            <div style="width: 337px; height: 1px; background: #E6E6E6; margin-top: 8px; margin-bottom: 14px"></div>
+          </div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">O</span>
+          
+            <button type="button" aria-label="Seat O1, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat O2, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat O3, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat O4, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat O5, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat O6, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat O7, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat O8, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat O9, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat O10, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat O11, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat O12, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat O13, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat O14, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 20px; margin-bottom: 12px">
+          <span style="width: 20px; font-size: 15px; color: #666666">P</span>
+          
+            <button type="button" aria-label="Seat P1, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">1</button>
+          
+            <button type="button" aria-label="Seat P2, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">2</button>
+          
+            <button type="button" aria-label="Seat P3, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">3</button>
+          
+            <button type="button" aria-label="Seat P4, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">4</button>
+          
+            <button type="button" aria-label="Seat P5, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">5</button>
+          
+            <button type="button" aria-label="Seat P6, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">6</button>
+          
+            <button type="button" aria-label="Seat P7, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">7</button>
+          
+            <button type="button" aria-label="Seat P8, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">8</button>
+          
+            <button type="button" aria-label="Seat P9, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; margin-left: 16px; ">9</button>
+          
+            <button type="button" aria-label="Seat P10, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">10</button>
+          
+            <button type="button" aria-label="Seat P11, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">11</button>
+          
+            <button type="button" aria-label="Seat P12, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">12</button>
+          
+            <button type="button" aria-label="Seat P13, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">13</button>
+          
+            <button type="button" aria-label="Seat P14, ₹150" aria-pressed="false" style="width: 32px; height: 32px; flex: none; border-radius: 4px; padding: 0; font-size: 13px; line-height: 32px; cursor: pointer; background: #FFFFFF; border: 1px solid #1EA362; color: #222222; ">14</button>
+          
+        </div>
+      </div>
+    
+  </div>
+
+  <div style="height: 44px; flex: none; display: flex; align-items: center; gap: 24px; padding: 0 16px; background: #FFFFFF">
+    <span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 3px; border: 1px solid #1EA362; background: #FFFFFF"></span><span style="font-size: 14px; color: #666666">Available</span></span>
+    <span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #1EA362"></span><span style="font-size: 14px; color: #666666">Selected</span></span>
+    <span style="display: flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 3px; background: #EDEDED"></span><span style="font-size: 14px; color: #666666">Sold</span></span>
+  </div>
+
+  <div style="height: 64px; flex: none; box-sizing: border-box; display: flex; align-items: center; padding: 0 16px; background: #FFFFFF; border-top: 1px solid #E6E6E6">
+    <span style="width: 48px; height: 48px; border: 1px solid #E6E6E6; border-radius: 4px; display: flex; align-items: center; justify-content: center">
+      <svg width="30" height="22" viewBox="0 0 30 22" fill="none" aria-hidden="true"><path d="M2 11.5L9.5 19 28 2" stroke="#F84464" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </span>
+    <span style="margin-left: 12px; font-size: 15px; color: #222222">YES Private Debit Card Offer</span>
+    <span style="margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 5px">
+      <span style="font-size: 15px; color: #222222">1/3</span>
+      <span style="display: flex; gap: 4px"><span style="width: 6px; height: 6px; border-radius: 3px; background: #222222"></span><span style="width: 6px; height: 6px; border-radius: 3px; background: #D9D9D9"></span><span style="width: 6px; height: 6px; border-radius: 3px; background: #D9D9D9"></span></span>
+    </span>
+  </div>
+
+  <div style="height: 88px; flex: none; box-sizing: border-box; background: #FFFFFF; border-top: 1px solid #E6E6E6; position: relative">
+    <div style="display: flex; gap: 16px; padding: 12px 16px 0 16px">
+      <a href="A2.html" style="width: 169px; height: 52px; box-sizing: border-box; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #F84464; color: #F84464; font-size: 17px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; text-decoration: none">
+        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" aria-hidden="true"><circle cx="6.5" cy="4.5" r="3" stroke="#F84464" stroke-width="1.6"></circle><path d="M1.5 14c0-2.8 2.2-4.5 5-4.5s5 1.7 5 4.5" stroke="#F84464" stroke-width="1.6" stroke-linecap="round"></path><path d="M12.5 2.2a3 3 0 010 5.1M13.6 14c0-2.3-1-3.8-2.4-4.4" stroke="#F84464" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        <span>Split &amp; hold</span>
+      </a>
+      <button type="button" style="width: 176px; height: 52px; border-radius: 8px; background: #F84464; border: none; color: #FFFFFF; font-size: 17px; font-weight: 600; cursor: pointer">Pay ₹ 1,000</button>
+    </div>
+    <div style="position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); width: 134px; height: 5px; border-radius: 3px; background: #000000"></div>
+  </div>
+
+</div>
+</body>
+</html>
